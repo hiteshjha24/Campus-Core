@@ -1,0 +1,162 @@
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#main {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+}
+
+#fakeheader {
+  height: 7%;
+  width: 100%;
+  background-color: white;
+}
+
+/* nav bar  */
+#header {
+  height: 7%;
+  width: 100%;
+  background-color: black;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+}
+
+#logo {
+  width: 4%;
+  height: 100%;
+  border: solid white;
+  border-radius: 50%;
+  object-fit: cover;
+}
+#logo img{
+border-radius: 50%;
+}
+#webname {
+  width: 10%;
+  height: 70%;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+#space {
+  width: 72%;
+}
+#userpic img {
+  width: 65%;
+}
+#userpic {
+  width: 3%;
+  height: 80%;
+  margin: 1px;
+
+}
+
+#username {
+  margin: 0px;
+  height: 50%;
+}
+#username:hover {
+  color: rgb(34, 34, 217);
+}
+
+#collegepic {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+#pic{
+  height: 95%;
+  width: 95%;
+  border: solid black;
+  border-radius: 50px;
+  object-fit: cover;
+  overflow: hidden;
+}
+img{
+  height: 100%;
+  width: 100%;
+}
+#navbar {
+  height: 7%;
+  width: 100%;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} 
+#navbar p{
+  font-size: larger;
+  margin: 2%;
+}
+
+.next:hover{
+  color: rgb(34, 34, 217);
+  }
+
+#post-container{
+  height: 46%;
+  height: 100%;
+}
+.post-card {
+  width: 200px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.post-image img {
+  width: 100%;
+  height: auto;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-top: 1px solid #eee;
+}
+
+.post-actions button {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.post-actions button:hover {
+  color: #007bff;
+}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+
+        header {
+            background-color: #000000;
+            color: #ffffff;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 1rem;
+            justify-content: space-between;
+        }
+
+        header img {
+            height: 40px;
+            margin-right: 1rem;
+        }
+        #viv{
+            height:100px;
+            padding-top:  300px;
+            padding-right: 100px;
+            
+        }
+
+
+
+    #viv img {
+      border-radius: 50%;
+      
+    }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.5rem;
+        }
+
+        nav {
+      display: flex;
+      gap: 1rem;
+    }
+
+        nav a {
+            position: relative;
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: background-color 0.3s;
+        }
+
+        nav a::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #ffffff;
+            transition: width 0.3s ease-in-out;
+        }
+
+        nav a:hover::before {
+            width: 100%;
+        }
+
+        nav a:hover {
+            background-color: #333333;
+        }
+
+        .container {
+            padding: 1rem;
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .text-section {
+            width: 45%;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 3rem;
+            font-style: italic;
+            animation: textFadeIn 3s ease-in-out infinite;
+        }
+
+        @keyframes textFadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            50% { opacity: 1; transform: translateY(0); }
+            100% { opacity: 0; transform: translateY(-20px); }
+        }
+
+        .slider {
+            position: relative;
+            top: 1rem;
+            right: 0;
+            width: 50%;
+            margin-left: auto;
+        }
+
+        .slider img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .slider-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .slider-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slider-item {
+            min-width: 100%;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #000000;
+            color: #ffffff;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 0.5rem;
+        }
+
+        .button:hover {
+            background-color: #333333;
+        }
+
+        .bottom-section {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            margin-top: 2rem;
+            padding: 1rem;
+        }
+
+        .bottom-section img {
+            width: 40%;
+            margin-left: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div style="display: flex; align-items: center;">
+            <img src="logo.jpg" alt="logo" >
+            <h1 style="font-family: cursive;">CAMPUS CORE</h1>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Login</a>
+            <a href="#">Contact</a>
+            <!-- <a href="http://localhost:3000/home">Add post</a> -->
+        </nav>
+    </header>
+
+    <div>
+
+     <div>
+      <style>
+        /* Styling for the select dropdown */
+        .navbar-select-container {
+            position: relative;
+            width: 45%;
+            margin: 110px auto;
+        }
+      
+        .navbar-select {
+            display: block;
+            width: 110%;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            padding: 15px 15px;
+            border: 1px solid #ccc;
+            border-radius: 35px;
+            background-color: #020202;
+            color: white;
+            appearance: none; /* Hides the default dropdown arrow */
+            cursor: pointer;
+            text-align: center;
+        }
+      
+        .navbar-select:focus {
+            outline: none;
+            border-color: #4c54af;
+        }
+      
+        .navbar-select option {
+            background-color: white;
+            color: black;
+            padding: 10px;
+        }
+      
+        /* Custom dropdown arrow */
+        .navbar-select-container::after {
+            content: '▼';
+            position: absolute;
+            top: 50%;
+            right: 15px;
+            transform: translateY(-50%);
+            font-size: 14px;
+            color: white;
+            pointer-events: none; /* Prevents interaction with the arrow */
+        }
+      </style>
+      
+      <div class="navbar-select-container">
+        <select class="navbar-select" onchange="navigateToPage(this.value)">
+            <!-- <option value="" disabled selected>Select your university...</option> -->
+            <option value="#">Select your UNIVERSITY....</option>
+            <option value="https://www.dtu.ac.in/">DELHI TECHNICAL UNIVERSITY</option>
+            <option value="https://beautiful-mochi-0f96b7.netlify.app/">MAHARISHI UNIVERSITY</option>
+            <option value="https://www.du.ac.in/">DELHI UNIVERSITY</option>
+            <option value="https://www.ipu.ac.in/">GGSIP UNIVERSITY</option>
+        </select>
+      </div>
+      
+      <script>
+        // JavaScript function to navigate to the selected page
+        function navigateToPage(url) {
+            if (url) {
+                window.location.href = url;
+            }
+        }
+      </script>
+     </div>
+
+     <div>
+        <style>
+            .features {
+                display: flex;
+                justify-content: space-around;
+                padding: 2rem;
+                background-color: #f9f9f9;
+            }
+          
+            .feature-card {
+                background-color: rgb(255, 255, 255);
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                padding: 1rem;
+                text-align: center;
+                width: 30%;
+            }
+          
+            .feature-card img {
+                width: 50px;
+                margin-bottom: 4rem;
+            }
+          
+            .feature-card h3 {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+          
+            .feature-card p {
+                font-size: 1rem;
+                color: #555;
+            }
+          </style>
+          
+          <div class="features" id="features">
+            <div class="feature-card">
+                <img src="https://via.placeholder.com/50" alt="Feature 1">
+                <h3>Easy Navigation</h3>
+                <p>Find everything you need with ease.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://via.placeholder.com/50" alt="Feature 2">
+                <h3>University Resources</h3>
+                <p>Access resources tailored to your university.</p>
+            </div>
+            <div class="feature-card">
+                <img src="https://via.placeholder.com/50" alt="Feature 3">
+                <h3>Community Support</h3>
+                <p>Connect with peers and seniors.</p>
+            </div>
+          </div>
+     </div>
+
+
+
+</body>
+</html>
